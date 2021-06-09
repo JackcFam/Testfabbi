@@ -35,6 +35,5 @@ function sort_array($array=array()) {
 }
 //bài 3
 function sort_arr() {
-
 }
 //bài này em mới nghĩ ra: là sắp xếp các lại mảng xong tìm khoảng cách nhỏ nhất giữa 2 phần tử. e chưa kịp làm
