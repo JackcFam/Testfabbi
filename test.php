@@ -2,24 +2,26 @@
 //bài 2
 function count($mang)
 {
+    
     $sophantu = count($mang);
+   
     for ($i = 0; $i < $sophantu - 1; $i++)
     {
-        $min = $i;
+       
+        $max = $i;
         for ($j = $i + 1; $j < $sophantu; $j++){
-            if ($mang[$j] < $mang[$min]){
-                $min = $j;
+            if ($mang[$j] > $mang[$max]){
+                $max = $j;
             }
         }
-  
+        
         $temp = $mang[$i];
-        $mang[$i] = $mang[$min];
-        $mang[$min] = $temp;
+        $mang[$i] = $mang[$max];
+        $mang[$max] = $temp;
     }
   
-    
-    return $mang[$sophantu] + $mang[$sophantu -1];
-} 
+    return $mang[0] + $mang[1];
+}
 
 //bài 1
 function sort_array($array=array()) {
