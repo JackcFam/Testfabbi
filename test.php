@@ -1,22 +1,25 @@
 <?php
 //bài 2
-function maximum_sum($array=array()){
-    $result = '';
-    $n = count($array);
-    for($i=0; $i<$n; $i++){
-        for($j=0; $j<=$i; $j++){
-            if($array[$j] > $array[$i]){
-                $array[$i] = $array[$i] + $array[$j];
-                $array[$j] = $array[$i] - $array[$j];
-                $array[$i] = $array[$i] - $array[$j];
+function count($mang)
+{
+    $sophantu = count($mang);
+    for ($i = 0; $i < $sophantu - 1; $i++)
+    {
+        $min = $i;
+        for ($j = $i + 1; $j < $sophantu; $j++){
+            if ($mang[$j] < $mang[$min]){
+                $min = $j;
             }
         }
+  
+        $temp = $mang[$i];
+        $mang[$i] = $mang[$min];
+        $mang[$min] = $temp;
     }
-
-    $result = $array[$n] + $array[$n-1];
-
-    return $result;
-}
+  
+    
+    return $mang[$sophantu] + $mang[$sophantu -1];
+} 
 
 //bài 1
 function sort_array($array=array()) {
