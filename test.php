@@ -30,7 +30,7 @@ function sort_array($array=array()) {
     $m = 1;
    foreach($new_array as $array){
         foreach($array as $new){
-            array_push($new[$m]);
+            array_push($result,$new[$m]);
         }
         $m++;
    }
