@@ -29,7 +29,7 @@ function sort_array($array=array()) {
     $result = array();
     for ($i = 0; $i < count($newArr); $i++) {
         for ($j = 0; $j < count($newArr); $j++) {
-            array_push($result,$newArr[j][i]);
+            array_push($result,$newArr[$j][$i]);
         }
     }
 	return $result;
