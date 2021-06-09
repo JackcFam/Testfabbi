@@ -28,8 +28,8 @@ function sort_array($array=array()) {
     $result = array();
     $new_array = array_chunk($array,3);
     $m = 1;
-   foreach($new_array as $array){
-        foreach($array as $new){
+   foreach($new_array as $arrays){
+        for($arrays as $new){
             array_push($result,$new[$m]);
         }
         $m++;
