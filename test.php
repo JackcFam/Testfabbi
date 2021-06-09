@@ -25,12 +25,16 @@ function count($mang)
 
 //bài 1
 function sort_array($array=array()) {
-    $newArr = array_chunk($array,3);
+    $newArr = array_chunk($array, 3);
     $result = array();
-    for ($i = 0; $i < count($newArr); $i++) {
-        for ($j = 0; $j < count($newArr); $j++) {
-            array_push($result,$newArr[$j][$i]);
+    $d = 0;
+    foreach ($newArr as $array) {
+        for ($j = 0; $j < count($array); $j++) {
+        	if($d == $j){
+            	array_push($result,$array[$j]);
+            }
         }
+        $d++;
     }
 	return $result;
 }
