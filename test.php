@@ -25,7 +25,7 @@ function count($mang)
 
 //bài 1
 function sort_array($array=array()) {
-    $newArr = array_chunk($array);
+    $newArr = array_chunk($array,3);
     $result = array();
     for ($i = 0; $i < count($newArr); $i++) {
         for ($j = 0; $j < count($newArr); $j++) {
