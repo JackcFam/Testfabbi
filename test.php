@@ -27,14 +27,10 @@ function count($mang)
 function sort_array($array=array()) {
     $newArr = array_chunk($array, 3);
     $result = array();
-    $d = 0;
-    foreach ($newArr as $array) {
-        for ($j = 0; $j < count($array); $j++) {
-        	if($d == $j){
-            	array_push($result,$array[$j]);
-            }
-        }
-        $d++;
+    for($i=0; $i<count($newArr); $i++){
+    	$newarray = array_column($newArr,$i);
+       $result = array_merge($result,$newarray);
+        
     }
 	return $result;
 }
