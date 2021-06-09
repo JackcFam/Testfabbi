@@ -25,20 +25,14 @@ function count($mang)
 
 //bài 1
 function sort_array($array=array()) {
-    $length_array = count($array);
-    $length_threshold = $length_array / 3;
-    $newArr = [];
-    for ($i = 0; $i < $length_threshold; $i++) {
-    array_push($newArr,array_slice($array,(i * 3, (i + 1) * 3)));
-    }
-    $result = [];
+    $newArr = array_chunk($array);
+    $result = array();
     for ($i = 0; $i < count($newArr); $i++) {
         for ($j = 0; $j < count($newArr); $j++) {
             array_push($result,$newArr[j][i]);
         }
     }
-return $result
-
+	return $result;
 }
 //bài 3
 function sort_arr() {
